@@ -1,0 +1,102 @@
+{
+    "swagger": "2.0",
+    "basePath": "/",
+    "paths": {
+        "/products/": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "create a new product",
+                "operationId": "post_product_list",
+                "tags": [
+                    "products"
+                ]
+            },
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "List all the Products",
+                "operationId": "get_product_list",
+                "tags": [
+                    "products"
+                ]
+            }
+        },
+        "/products/{int}:id": {
+            "parameters": [
+                {
+                    "name": "int",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "get a single product by id",
+                "operationId": "get_product_resource",
+                "tags": [
+                    "products"
+                ]
+            },
+            "delete": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "delete a product",
+                "operationId": "delete_product_resource",
+                "tags": [
+                    "products"
+                ]
+            },
+            "put": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "update a product",
+                "operationId": "put_product_resource",
+                "tags": [
+                    "products"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "API",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "products",
+            "description": "operations related to products"
+        }
+    ],
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}
